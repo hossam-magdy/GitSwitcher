@@ -19,6 +19,13 @@
 ## COMMIT adding modified files only
 `git commit -a -m "Commit message"`
 
+
+## BRANCH: List, create, or delete branches
+[`git branch`](https://git-scm.com/docs/git-branch)
+>
+`-d` : 
+
+
 ## CHECKOUT a branch
 [`git checkout`](https://git-scm.com/docs/git-checkout)
 >
@@ -36,8 +43,10 @@
 ## STATUS
 `git status`
 
+
 ## ADD new/modified to staging area
 `git add "FILES"`
+
 
 ## SAVE PASSWORD
 `git config credential.helper store`
