@@ -1,5 +1,6 @@
 # Git commands
 
+
 ## LOG
 [`git log`](https://git-scm.com/docs/git-log)
 > 
@@ -20,20 +21,6 @@
 `git commit -a -m "Commit message"`
 
 
-## BRANCH: List, create, or delete branches
-[`git branch`](https://git-scm.com/docs/git-branch)
->
-`-d`|`--delete`: Delete a branch. The branch must be fully merged in its upstream branch, or in HEAD if no upstream was set with --track or --set-upstream.
-
-`-D` : Shortcut for `--delete --force`.
-
-`-f`|`--force` : Reset <branchname> to <startpoint> if <branchname> exists already
-
-`-i`|`--ignore-case` : Sorting and filtering branches are case insensitive.
-
-`-m`|`--move` : Move/rename a branch and the corresponding reflog. To rename: `git branch -m <oldname> <newname>`.To rename the current branch, you can do: `git branch -m <newname>`
-
-
 ## CHECKOUT a branch
 [`git checkout`](https://git-scm.com/docs/git-checkout)
 >
@@ -46,6 +33,22 @@
 `-m`|`--merge` : 
 
 `git checkout <branch>`
+
+
+## BRANCH: List, create, or delete branches
+[`git branch`](https://git-scm.com/docs/git-branch)
+>
+`-d`|`--delete`: Delete a branch. The branch must be fully merged in its upstream branch, or in HEAD if no upstream was set with --track or --set-upstream.
+
+`-D` : Shortcut for `--delete --force`.
+
+`-f`|`--force` : Reset <branchname> to <startpoint> if <branchname> exists already
+
+`-i`|`--ignore-case` : Sorting and filtering branches are case insensitive.
+
+`-m`|`--move` : Move/rename a branch and the corresponding reflog. To rename: `git branch -m <oldname> <newname>`.To rename the current branch, you can do: `git branch -m <newname>`.
+
+`-a`|`--all` : List both remote-tracking branches and local branches.
 
 
 ## STATUS
