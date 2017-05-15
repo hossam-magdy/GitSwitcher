@@ -70,5 +70,7 @@
 
 
 ## SAVE PASSWORD
-`git config credential.helper store`
+(`git config credential.helper store`)[https://git-scm.com/docs/git-credential-store]
+
+A `.git-credentials` file is stored/read in plaintext in order of precedence of: `~/.git-credentials` or `$XDG_CONFIG_HOME/git/credentials`
 
