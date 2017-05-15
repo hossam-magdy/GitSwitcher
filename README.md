@@ -1,5 +1,15 @@
 # Git commands
 
+`git log --graph --oneline --decorate --all`
+
+`git commit -a -m "COMMIT_MESSAGE"` : Add only modified files to staging area & commit
+
+`git checkout BRANCH_NAME` : Switch/Checkout to `BRANCH_NAME`
+
+`git checkout -b NEW_BRANCH_NAME` : Create & checkout `NEW_BRANCH_NAME`
+
+`git status`
+
 
 ## LOG
 [`git log`](https://git-scm.com/docs/git-log)
