@@ -19,6 +19,20 @@
 ## COMMIT adding modified files only
 `git commit -a -m "Commit message"`
 
+## CHECKOUT a branch
+[`git checkout`](https://git-scm.com/docs/git-checkout)
+>
+`-f` : proceed even if the index or the working tree differs from HEAD. This is used to throw away local changes.
+
+`-b <new_branch>` : Create a new branch named <new_branch> and start it at <start_point>
+
+`-t`|`--track` : set up "upstream" configuration
+
+`-m`|`--merge` : 
+
+`git checkout <branch>`
+
+
 ## STATUS
 `git status`
 
