@@ -12,7 +12,7 @@
 
 `git checkout -b NEW_BRANCH_NAME` : Create & checkout `NEW_BRANCH_NAME`
 
-`git branch` : List LOCAL branches. `git branch -r` : List REMOTE branches. `git branch -a` : List LOCAL & REMOTE branches.
+`git branch` : List LOCAL branches. `git branch -r` : List REMOTE branches. `git branch -a` : List ALL branches.
 
 `git branch NEW_BRANCH` : Create new branch.
 
