@@ -1,16 +1,26 @@
 # Git commands
 
+`git status`
+
 `git log --graph --oneline --decorate --all`
 
 `git commit -a -m "COMMIT_MESSAGE"` : Add only modified files to staging area & commit
+
+`git commit -a --amend` : Add only modified files to the last commit (amend/edit the last commit)
 
 `git checkout BRANCH_NAME` : Switch/Checkout to `BRANCH_NAME`
 
 `git checkout -b NEW_BRANCH_NAME` : Create & checkout `NEW_BRANCH_NAME`
 
-`git status`
-
 `git config credential.helper store` : store/read credentials as plaintext in `~/.git-credentials`
+
+`git checkout HEAD -- my-file.txt`: resets the `my-file.txt` to its state at current `HEAD`
+
+`git reset --hard`: DISCARD all uncommited changes in working tree
+
+`git reset HEAD~1 --soft`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in working tree
+
+`git reset HEAD~1 --hard`: remove a commit (reset HEAD to 1st previous commit) & DISCARD changes in working tree
 
 
 ## LOG
@@ -30,7 +40,31 @@
 
 
 ## COMMIT adding modified files only
-`git commit -a -m "Commit message"`
+[`git commit`](https://git-scm.com/docs/git-commit)
+>
+`-a` |`--all` : automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected
+
+`--reset-author` : When used with -C/-c/--amend options, or when committing after a conflicting cherry-pick, declare that the authorship of the resulting commit now belongs to the committer. This also renews the author timestamp.
+
+`-m <msg>`|`--message=<msg>` : Use the given `<msg>` as the commit message. If multiple -m options are given, their values are concatenated as separate paragraphs
+
+`--amend` : Replace the tip of the current branch by a new commit. The new commit has the same parents and author as the current one (the --reset-author option can countermand this). It is a rough equivalent for:
+
+	$ git reset --soft HEAD^
+	$ ... do something else to come up with the right tree ...
+	$ git commit -c ORIG_HEAD
+
+`-F <file>`|`--file=<file>` : Take the commit message from the given file
+
+`-v`|`--verbose` : Show unified diff between the HEAD commit and what would be committed at the bottom of the commit message template to help the user describe the commit by reminding what changes the commit has. Note that this diff output doesn’t have its lines prefixed with #. This diff will not be a part of the commit message. 
+
+`--dry-run` : Do not create a commit, but show a list of paths that are to be committed, paths with local changes that will be left uncommitted and paths that are untracked.
+
+`<file>…` : When files are given on the command line, the command commits the contents of the named files, without recording the changes already staged
+
+
+## RESET: Reset current HEAD to the specified state
+[`git reset`](https://git-scm.com/docs/git-reset)
 
 
 ## CHECKOUT a branch
@@ -63,6 +97,12 @@
 `-a`|`--all` : List both remote-tracking branches and local branches.
 
 
+## DIFF: Show changes between commits, commit and working tree, etc
+[`git diff`](https://git-scm.com/docs/git-diff)
+>
+`-a` |`--all` : automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected
+
+
 ## STATUS
 `git status`
 
@@ -75,4 +115,8 @@
 [`git config credential.helper store`](https://git-scm.com/docs/git-credential-store)
 
 A `.git-credentials` file is stored/read as plaintext in order of precedence of: `~/.git-credentials` or `$XDG_CONFIG_HOME/git/credentials`
+
+
+## Note:
+In any git command: parameter ` -- ` (with space before & after) basically means: *treat every argument after this point as a file name*.
 
