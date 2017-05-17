@@ -12,15 +12,23 @@
 
 `git checkout -b NEW_BRANCH_NAME` : Create & checkout `NEW_BRANCH_NAME`
 
-`git config credential.helper store` : store/read credentials as plaintext in `~/.git-credentials`
+`git branch` : List LOCAL branches. `git branch -r` : List REMOTE branches. `git branch -a` : List LOCAL & REMOTE branches.
 
-`git checkout HEAD -- my-file.txt`: resets the `my-file.txt` to its state at current `HEAD`
+`git branch NEW_BRANCH` : Create new branch.
+
+`git branch -d BRANCH_TO_DELETE` : Delete a branch (if it is fully-merged to its upstream or HEAD)
+
+`git branch -D BRANCH_TO_DELETE` : Delete a branch (regardless the merge state to its upstream or HEAD)
+
+`git checkout HEAD -- my-file.txt`: resets only `my-file.txt` to its state at current `HEAD`
 
 `git reset --hard`: DISCARD all uncommited changes in working tree
 
 `git reset HEAD~1 --soft`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in working tree
 
 `git reset HEAD~1 --hard`: remove a commit (reset HEAD to 1st previous commit) & DISCARD changes in working tree
+
+`git config credential.helper store` : store/read credentials as plaintext in `~/.git-credentials`
 
 
 ## LOG
