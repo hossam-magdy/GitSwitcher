@@ -30,6 +30,10 @@
 
 `git config credential.helper store` : store/read credentials as plaintext in `~/.git-credentials`
 
+`git config --global user.email "you@example.com"`: set the Email of the author/committer
+
+`git config --global user.name "Your Name"`: set the Name of the author/committer
+
 
 ## LOG
 [`git log`](https://git-scm.com/docs/git-log)
