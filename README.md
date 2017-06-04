@@ -1,12 +1,18 @@
 # Git commands
 
+#### - Status & log
+
 `git status`
 
 `git log --graph --oneline --decorate --all --stat`
 
+#### - Committing
+
 `git commit -a -m "COMMIT_MSG"`: Add only changed tracked-files to staging area & commit
 
 `git commit -a --amend` : Amend/edit the last commit to include changes in tracked files
+
+#### - Branching & switching (checkout)
 
 `git checkout BRANCH_NAME` : Switch/Checkout to `BRANCH_NAME`
 
@@ -22,15 +28,15 @@
 
 `git checkout HEAD -- my-file.txt`: resets only `my-file.txt` to its state at current `HEAD`
 
-`git reset --hard`: DISCARD all uncommited changes in working tree
-
-#### - Remove last commit[s]
+#### - Remove last commit[s] or uncommitted changes
 
 `git reset HEAD~1 [--mixed]`: remove the last 1 commit & KEEP changes in working directory/tree
 
 `git reset HEAD~1 --soft`: remove the last 1 commit & KEEP changes in "Changes to be committed"
 
 `git reset HEAD~1 --hard`: remove the last 1 commit & DISCARD changes in working directory/tree
+
+`git reset --hard`: DISCARD all uncommited changes in working tree or staging area
 
 #### - Changing the committer identity
 
