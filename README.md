@@ -4,9 +4,9 @@
 
 `git log --graph --oneline --decorate --all --stat`
 
-`git commit -a -m "COMMIT_MESSAGE"` : Add only modified files to staging area & commit
+`git commit -a -m "COMMIT_MSG"`: Add only changed tracked-files to staging area & commit
 
-`git commit -a --amend` : Add only modified files to the last commit (amend/edit the last commit)
+`git commit -a --amend` : Amend/edit the last commit to include changes in tracked files
 
 `git checkout BRANCH_NAME` : Switch/Checkout to `BRANCH_NAME`
 
@@ -24,11 +24,13 @@
 
 `git reset --hard`: DISCARD all uncommited changes in working tree
 
-#### - Remove a latest commit[s]
+#### - Remove last commit[s]
 
-`git reset HEAD~1 --soft`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in working tree
+`git reset HEAD~1 [--mixed]`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in working directory/tree
 
-`git reset HEAD~1 --hard`: remove a commit (reset HEAD to 1st previous commit) & DISCARD changes in working tree
+`git reset HEAD~1 --soft`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in "Changes to be committed"
+
+`git reset HEAD~1 --hard`: remove a commit (reset HEAD to 1st previous commit) & DISCARD changes in working directory/tree
 
 ++Note: The next push should be forced++
 
@@ -71,7 +73,7 @@
 
 `--reset-author` : When used with -C/-c/--amend options, or when committing after a conflicting cherry-pick, declare that the authorship of the resulting commit now belongs to the committer. This also renews the author timestamp.
 
-`-m <msg>`|`--message=<msg>` : Use the given `<msg>` as the commit message. If multiple -m options are given, their values are concatenated as separate paragraphs
+`-m <msg>`|`--message=<msg>` : Use the given `<msg>` as the commit message. If multiple -m options are given, their values are concatenated as separate paragraphs  (use multiple `-m` attributes for multi-line commit message)
 
 `--amend` : Replace the tip of the current branch by a new commit. The new commit has the same parents and author as the current one (the --reset-author option can countermand this). It is a rough equivalent for:
 
@@ -148,3 +150,4 @@
 
 ## Note:
 In any git command: parameter ` -- ` (with space before & after) basically means: *treat every argument after this point as a file name*.
+
