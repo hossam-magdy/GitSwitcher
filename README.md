@@ -2,7 +2,7 @@
 
 `git status`
 
-`git log --graph --oneline --decorate --all`
+`git log --graph --oneline --decorate --all --stat`
 
 `git commit -a -m "COMMIT_MESSAGE"` : Add only modified files to staging area & commit
 
@@ -10,7 +10,7 @@
 
 `git checkout BRANCH_NAME` : Switch/Checkout to `BRANCH_NAME`
 
-`git checkout -b NEW_BRANCH_NAME` : Create & checkout `NEW_BRANCH_NAME`
+`git checkout -b NEW_BRANCH_NAME` : Create & checkout a new branch
 
 `git branch` : List LOCAL branches. `git branch -r` : List REMOTE branches. `git branch -a` : List ALL branches.
 
@@ -24,15 +24,28 @@
 
 `git reset --hard`: DISCARD all uncommited changes in working tree
 
+#### - Remove a latest commit[s]
+
 `git reset HEAD~1 --soft`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in working tree
 
 `git reset HEAD~1 --hard`: remove a commit (reset HEAD to 1st previous commit) & DISCARD changes in working tree
 
-`git config credential.helper store` : store/read credentials as plaintext in `~/.git-credentials`
+++Note: The next push should be forced++
 
-`git config --global user.email "you@example.com"`: set the Email of the author/committer
+#### - Changing the committer identity
 
-`git config --global user.name "Your Name"`: set the Name of the author/committer
+`git config [--global] user.email "you@example.com"`: set the Email of the author/committer
+
+`git config [--global] user.name "Your Name"`: set the Name of the author/committer
+
+#### - Storing credentials
+
+`git config credential.helper store` : [store](https://git-scm.com/docs/git-credential-store) the next input credentials as plaintext in `~/.git-credentials`
+
+`git config credential.helper cache [--timeout=900]` : [cache](https://git-scm.com/docs/git-credential-cache) the next input credentials as plaintext in global file.
+>To forget all cached credentails before timeout: `git credential-cache exit`
+
+`git remote set-url origin https://USERNAME:PASSWORD@repository-url.com/group/repo.git`: store credentials as plaintext in `.git/config` file of local repository
 
 
 ## LOG
@@ -123,12 +136,15 @@
 `git add "FILES"`
 
 
-## SAVE PASSWORD
-[`git config credential.helper store`](https://git-scm.com/docs/git-credential-store)
+## SAVE CREDENTIALS
+[`git config credential.helper store`](https://git-scm.com/docs/git-credential-store): The next input credentials are stored in `.git-credentials` is as plaintext in order of precedence of: `~/.git-credentials` or `$XDG_CONFIG_HOME/git/credentials`
 
-A `.git-credentials` file is stored/read as plaintext in order of precedence of: `~/.git-credentials` or `$XDG_CONFIG_HOME/git/credentials`
+[`git config credential.helper cache [--timeout=900]`](https://git-scm.com/docs/git-credential-cache): The next input credentials are cached in `$XDG_CACHE_HOME/git/credential/socket` unless `~/.git-credential-cache/socket` exists
+
+`git credential-cache exit`: Forget all cached credentails before timeout
+
+`git remote set-url origin https://USERNAME:PASSWORD@repository-url.com/group/repo.git`: Store credentials as plaintext in `.git/config` file of local repository
 
 
 ## Note:
 In any git command: parameter ` -- ` (with space before & after) basically means: *treat every argument after this point as a file name*.
-
