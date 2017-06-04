@@ -55,7 +55,7 @@
 `git config credential.helper cache [--timeout=900]` : [cache](https://git-scm.com/docs/git-credential-cache) the next input credentials as plaintext in global file.
 >To forget all cached credentails before timeout: `git credential-cache exit`
 
-`git remote set-url origin https://USERNAME:PASSWORD@repository-url.com/group/repo.git`: store credentials as plaintext in `.git/config` file of local repository
+`git remote set-url origin https://USER:PASS@repo-url.com/repo.git`: store credentials as plaintext in `.git/config` file of local repository
 
 
 * * *
