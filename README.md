@@ -1,4 +1,8 @@
-# Git commands
+# git commands
+
+* * *
+
+# The most common:
 
 #### - Status & log
 
@@ -53,6 +57,10 @@
 
 `git remote set-url origin https://USERNAME:PASSWORD@repository-url.com/group/repo.git`: store credentials as plaintext in `.git/config` file of local repository
 
+
+* * *
+
+# Detailed:
 
 ## LOG
 [`git log`](https://git-scm.com/docs/git-log)
