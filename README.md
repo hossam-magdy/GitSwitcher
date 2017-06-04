@@ -26,11 +26,11 @@
 
 #### - Remove last commit[s]
 
-`git reset HEAD~1 [--mixed]`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in working directory/tree
+`git reset HEAD~1 [--mixed]`: remove the last 1 commit & KEEP changes in working directory/tree
 
-`git reset HEAD~1 --soft`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in "Changes to be committed"
+`git reset HEAD~1 --soft`: remove the last 1 commit & KEEP changes in "Changes to be committed"
 
-`git reset HEAD~1 --hard`: remove a commit (reset HEAD to 1st previous commit) & DISCARD changes in working directory/tree
+`git reset HEAD~1 --hard`: remove the last 1 commit & DISCARD changes in working directory/tree
 
 ++Note: The next push should be forced++
 
