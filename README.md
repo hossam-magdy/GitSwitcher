@@ -32,13 +32,11 @@
 
 `git reset HEAD~1 --hard`: remove the last 1 commit & DISCARD changes in working directory/tree
 
-++Note: The next push should be forced++
-
 #### - Changing the committer identity
 
-`git config [--global] user.email "you@example.com"`: set the Email of the author/committer
+`git config [--global] user.email "YOU@EXAMPLE.COM"`: set the Email of the author/committer
 
-`git config [--global] user.name "Your Name"`: set the Name of the author/committer
+`git config [--global] user.name "YOUR NAME"`: set the Name of the author/committer
 
 #### - Storing credentials
 
@@ -92,6 +90,12 @@
 
 ## RESET: Reset current HEAD to the specified state
 [`git reset`](https://git-scm.com/docs/git-reset)
+
+`git reset HEAD~1 [--mixed]`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in working directory/tree
+
+`git reset HEAD~1 --soft`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in "Changes to be committed"
+
+`git reset HEAD~1 --hard`: remove a commit (reset HEAD to 1st previous commit) & DISCARD changes in working directory/tree
 
 
 ## CHECKOUT a branch
