@@ -1,6 +1,6 @@
 # ShortNotes of Git commands
 
-### This is a quick reference, brief documentation for as a summary of 3 Udacity courses:
+### This is a quick reference or brief documentation as a summary of 3 Udacity courses:
 ### [ [ud775](https://www.udacity.com/course/how-to-use-git-and-github--ud775) , [ud123](https://www.udacity.com/course/version-control-with-git--ud123) , [ud456](https://www.udacity.com/course/github-collaboration--ud456) ] for the git commands used in hands-on situations.
 
 * * *
