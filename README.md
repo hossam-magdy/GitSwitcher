@@ -35,7 +35,7 @@
 
 `git checkout HEAD -- my-file.txt`: resets only `my-file.txt` to its state at current `HEAD`
 
-#### - Removing last commit[s] or uncommitted changes
+#### - Removing last commit[s] or uncommitted changes or Reverting specific commit[s]
 
 `git reset HEAD~1 [--mixed]`: remove the last 1 commit & KEEP changes in working directory/tree
 
