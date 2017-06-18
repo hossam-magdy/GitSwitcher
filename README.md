@@ -35,7 +35,7 @@
 
 `git checkout HEAD -- my-file.txt`: resets only `my-file.txt` to its state at current `HEAD`
 
-#### - Remove last commit[s] or uncommitted changes
+#### - Removing last commit[s] or uncommitted changes
 
 `git reset HEAD~1 [--mixed]`: remove the last 1 commit & KEEP changes in working directory/tree
 
@@ -44,6 +44,8 @@
 `git reset HEAD~1 --hard`: remove the last 1 commit & DISCARD changes in working directory/tree
 
 `git reset --hard`: DISCARD all uncommited changes in working tree or staging area
+
+`git revert COMMIT_ID`: Revert/Undo the changes of a commit and Create a new commit with the reverted changes
 
 #### - Changing the committer identity
 
@@ -113,6 +115,14 @@
 `git reset HEAD~1 --soft`: remove a commit (reset HEAD to 1st previous commit) & KEEP changes in "Changes to be committed"
 
 `git reset HEAD~1 --hard`: remove a commit (reset HEAD to 1st previous commit) & DISCARD changes in working directory/tree
+
+
+## REVERT: Revert some existing commits
+[`git revert`](https://git-scm.com/docs/git-revert)
+
+`git revert <commit>`: Revert/Undo/Negate the changes specified by a commit and Create a new commit with the reverted changes
+>
+`-n`|`--no-commit` : Usually the command automatically creates some commits with commit log messages stating which commits were reverted. This flag applies the changes necessary to revert the named commits to your working tree and the index, but does not make the commits
 
 
 ## CHECKOUT a branch
