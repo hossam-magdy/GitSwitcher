@@ -152,7 +152,11 @@
 
 `-m`|`--move` : Move/rename a branch and the corresponding reflog. To rename: `git branch -m <oldname> <newname>`.To rename the current branch, you can do: `git branch -m <newname>`.
 
+`-r`|`--remotes` : List both remote-tracking branches.
+
 `-a`|`--all` : List both remote-tracking branches and local branches.
+
+`-u <upstream>`|`--set-upstream-to=<upstream>`: Set up <branchname>'s tracking information so <upstream> is considered <branchname>'s upstream branch. `git branch -u myRemoteName/myBranchName [myBranchName]`
 
 
 ## DIFF: Show changes between commits, commit and working tree, etc
