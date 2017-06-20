@@ -15,7 +15,7 @@
 
 #### - Committing
 
-`git commit -a -m "COMMIT_MSG"`: Add only changed tracked-files to staging area & commit
+`git commit -am "COMMIT_MSG"`: Add only changed tracked-files to staging area & commit
 
 `git commit -a --amend` : Amend/edit the last commit to include changes in tracked files
 
