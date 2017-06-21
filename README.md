@@ -27,7 +27,7 @@
 
 `git branch` : List LOCAL branches. `git branch -r` : List REMOTE branches. `git branch -a` : List ALL branches.
 
-`git branch NEW_BRANCH` : Create new branch.
+`git branch NEW_BRANCH [<start-point>]` : Create new branch [optionally from a start-point (refs)]
 
 `git branch -d BRANCH_TO_DELETE` : Delete a branch (if it is fully-merged to its upstream or HEAD)
 
@@ -62,6 +62,28 @@
 
 `git remote set-url origin https://USER:PASS@repo-url.com/repo.git`: store credentials as plaintext for local repository (`.git/config`)
 
+#### - Merging, Solving conflicts & Logging:
+
+`git diff BRANCH1..BRANCH2`: Compare the tips of each branch
+
+`git merge --no-commit --stat --progress [--strategy-option==ours|theirs] BRANCH_TO_MERGE`
+
+`git diff HEAD --name-only`: List file names that changed due to merge (in case merge is done with --no-commit)
+
+`git diff HEAD`: Show any merge changes (in case merge is done with --no-commit)
+
+`git diff --name-only --diff-filter=U`: List file names that have merge conflicts
+
+`git diff --diff-filter=U`: Show the merge conflicts
+
+`git log --merge --decorate --source -p PATH_TO_FILE`: Show the history of a single file
+
+`git checkout --ours -- PATH_TO_FILE`: Revert a file to to its version at "our branch" (was checked out / being merged INTO)
+
+`git checkout --theirs -- PATH_TO_FILE`: Revert a file to to its version at "their branch" (being merged)
+
+`git checkout BRANCH_NAME -- PATH_TO_FILE`: Revert a file to to its version at specific branch
+
 
 * * *
 
@@ -70,17 +92,23 @@
 ## LOG
 [`git log`](https://git-scm.com/docs/git-log)
 > 
-`--graph      `: Draw a text-based graphical representation of the commit history on the left hand side of the output.
+`--graph	`: Draw a text-based graphical representation of the commit history on the left hand side of the output.
 
-`--oneline      `:
+`--oneline	`:
 
-`--decorate     `:
+`--decorate	`:
 
-`--all          `:
+`--all		`:
 
 `--relative-date`: shows dates relative to the current time, e.g. “2 hours ago”.
 
-`--stat         `:
+`--stat		`:
+
+`--merges	`: Print only merge commits. This is exactly the same as --min-parents=2
+
+`--merge	`: After a failed merge, show refs that touch files having a conflict and don’t exist on all heads to merge
+
+`--source	`: show the ref (branch) name given on the command line by which each commit was reached
 
 
 ## COMMIT adding modified files only
