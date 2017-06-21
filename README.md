@@ -7,19 +7,19 @@
 
 # The most common:
 
-#### - Status & log
+### - Status & log
 
 `git status`
 
 `git log --graph --oneline --decorate --all --stat`
 
-#### - Committing
+### - Committing
 
 `git commit -am "COMMIT_MSG"`: Add only changed tracked-files to staging area & commit
 
 `git commit -a --amend` : Amend/edit the last commit to include changes in tracked files
 
-#### - Branching & switching (checkout)
+### - Branching & switching (checkout)
 
 `git checkout BRANCH_NAME` : Switch/Checkout to `BRANCH_NAME`
 
@@ -35,7 +35,7 @@
 
 `git checkout HEAD -- my-file.txt`: resets only `my-file.txt` to its state at current `HEAD`
 
-#### - Removing last commit[s] or uncommitted changes or Reverting specific commit[s]
+### - Removing last commit[s] or uncommitted changes or Reverting specific commit[s]
 
 `git reset HEAD~1 [--mixed]`: remove the last 1 commit & KEEP changes in working directory/tree
 
@@ -47,13 +47,13 @@
 
 `git revert COMMIT_ID`: Revert/Undo the changes of a commit and Create a new commit with the reverted changes
 
-#### - Changing the committer identity
+### - Changing the committer identity
 
 `git config [--global] user.email "YOU@EXAMPLE.COM"`: set the Email of the author/committer
 
 `git config [--global] user.name "YOUR NAME"`: set the Name of the author/committer
 
-#### - Storing credentials
+### - Storing credentials
 
 `git config credential.helper store` : [store](https://git-scm.com/docs/git-credential-store) the next input credentials as plaintext in `~/.git-credentials`
 
@@ -62,7 +62,7 @@
 
 `git remote set-url origin https://USER:PASS@repo-url.com/repo.git`: store credentials as plaintext for local repository (`.git/config`)
 
-#### - Merging & Solving conflicts (**: must run, *: recommended)
+### - Merging & Solving conflicts (**: must run, *: recommended)
 
 *`git diff ..BRANCH_TO_MERGE` or `git diff CURRENT_BRANCH..BRANCH_TO_MERGE`: Compare the tips of two branches
 
