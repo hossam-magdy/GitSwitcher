@@ -66,7 +66,7 @@
 
 `git diff BRANCH1..BRANCH2`: Compare the tips of two branches
 
-`git merge --no-commit --stat --progress [--strategy-option==ours|theirs] BRANCH_TO_MERGE`: Merge branch to current HEAD (checked-out branch)
+`git merge --no-commit --stat --progress [--strategy-option==ours|theirs] BRANCH_TO_MERGE`: Merge branch to current HEAD (current checked-out branch)
 
 `git diff HEAD --name-only`: List file names that changed (in case merge is done with --no-commit)
 
