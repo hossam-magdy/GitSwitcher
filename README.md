@@ -64,17 +64,17 @@
 
 #### - Merging, Solving conflicts & Logging:
 
-`git diff BRANCH1..BRANCH2`: Compare the tips of two branches
+*`git diff ..BRANCH_TO_MERGE` or `git diff CURRENT_BRANCH..BRANCH_TO_MERGE`: Compare the tips of two branches
 
-`git merge --no-commit --stat --progress [--strategy-option==ours|theirs] BRANCH_TO_MERGE`: Merge branch to current HEAD (current checked-out branch)
+**`git merge --no-commit --stat --progress [--strategy-option==ours|theirs] BRANCH_TO_MERGE`: Merge branch to current HEAD (current checked-out branch)
 
-`git diff HEAD --name-only`: List file names that changed (in case merge is done with --no-commit)
+*`git diff HEAD`: Show any changes (in case merge is done with --no-commit)
 
-`git diff HEAD`: Show any changes (in case merge is done with --no-commit)
+*`git diff HEAD --name-only`: List file names that changed (in case merge is done with --no-commit)
 
-`git diff --name-only --diff-filter=U`: List file names that have merge conflicts
+*[if conflict] `git diff --name-only --diff-filter=U`: List file names that have merge conflicts
 
-`git diff`: Show the merge conflicts
+*[if conflict] `git diff`: Show the merge conflicts
 
 `git log --merge --decorate --source -p PATH_TO_FILE`: Show the history of a single file indicating branch names of each change
 
@@ -84,6 +84,7 @@
 
 `git checkout BRANCH_NAME -- PATH_TO_FILE`: Revert a file to to its version at specific branch
 
+**`git commit -am "Merged branch BRANCH_TO_MERGE"`: Comit the merge
 
 * * *
 
