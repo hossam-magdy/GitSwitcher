@@ -68,15 +68,15 @@
 
 `git merge --no-commit --stat --progress [--strategy-option==ours|theirs] BRANCH_TO_MERGE`
 
-`git diff HEAD --name-only`: List file names that changed due to merge (in case merge is done with --no-commit)
+`git diff HEAD --name-only`: List file names that changed (in case merge is done with --no-commit)
 
-`git diff HEAD`: Show any merge changes (in case merge is done with --no-commit)
+`git diff HEAD`: Show any changes (in case merge is done with --no-commit)
 
 `git diff --name-only --diff-filter=U`: List file names that have merge conflicts
 
-`git diff --diff-filter=U`: Show the merge conflicts
+`git diff`: Show the merge conflicts
 
-`git log --merge --decorate --source -p PATH_TO_FILE`: Show the history of a single file
+`git log --merge --decorate --source -p PATH_TO_FILE`: Show the history of a single file indicating branch names of each change
 
 `git checkout --ours -- PATH_TO_FILE`: Revert a file to to its version at "our branch" (was checked out / being merged INTO)
 
