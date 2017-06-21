@@ -62,7 +62,7 @@
 
 `git remote set-url origin https://USER:PASS@repo-url.com/repo.git`: store credentials as plaintext for local repository (`.git/config`)
 
-### - Merging & Solving conflicts (**: must run, *: recommended)
+### - Diff branches, Merging & Solving conflicts (**: must run, *: recommended)
 
 *`git diff ..BRANCH_TO_MERGE` or `git diff CURRENT_BRANCH..BRANCH_TO_MERGE`: Compare the tips of two branches
 
