@@ -27,9 +27,13 @@
 
 `git branch` : List LOCAL branches. `git branch -r` : List REMOTE branches. `git branch -a` : List ALL branches.
 
-`git branch --format='%(refname:lstrip=3)' -r -i`: List origin/* branches sorted
+`git branch --sort=v:refname --format='%(refname:lstrip=3)' -r`: List origin/* branches sorted
 
-Alias: `git for-each-ref --ignore-case --sort=v:refname --format='%(refname:lstrip=3)' refs/remotes/origin`
+OR: `git for-each-ref --ignore-case --sort=v:refname --format='%(refname:lstrip=3)' refs/remotes/origin`
+
+OR: `git for-each-ref --ignore-case --format='%(refname:lstrip=1)'`
+
+OR: `git for-each-ref --ignore-case --format='%(objecttype) [%(refname:short)] : %(creatordate)'`
 
 `git branch NEW_BRANCH [<start-point>]` : Create new branch [optionally from a start-point (refs)]
 
