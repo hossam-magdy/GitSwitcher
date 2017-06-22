@@ -94,7 +94,7 @@ OR: `git for-each-ref --ignore-case --format='%(objecttype) [%(refname:short)] :
 
 **`git commit -am "Merged branch BRANCH_TO_MERGE"`: Comit the merge
 
-
+[link](http://ifandelse.com/listing-git-branches-in-order-of-most-recent-commit/):
 ```
 git for-each-ref --sort=-committerdate --format='%(refname:short)|%(committerdate:iso)|%(authorname)' |  
     sed 's/refs\///g' |
