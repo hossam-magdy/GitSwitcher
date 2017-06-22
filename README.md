@@ -29,7 +29,7 @@
 
 `git branch --format='%(refname:lstrip=3)' -r -i`: List origin/* branches sorted
 
-Alias: `git for-each-ref --ignore-case --sort=v:refname --format='%(refname:lstrip=3)' refs/remotes/origin`: 
+Alias: `git for-each-ref --ignore-case --sort=v:refname --format='%(refname:lstrip=3)' refs/remotes/origin`
 
 `git branch NEW_BRANCH [<start-point>]` : Create new branch [optionally from a start-point (refs)]
 
