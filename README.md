@@ -94,6 +94,17 @@ OR: `git for-each-ref --ignore-case --format='%(objecttype) [%(refname:short)] :
 
 **`git commit -am "Merged branch BRANCH_TO_MERGE"`: Comit the merge
 
+
+```
+git for-each-ref --sort=-committerdate --format='%(refname:short)|%(committerdate:iso)|%(authorname)' |  
+    sed 's/refs\///g' |
+    grep -v BACKUP  | 
+    while IFS='|' read branch date author
+    do 
+        printf '%-28s %-18s %s\n' "$date" "$author" "$branch"
+    done
+```
+
 * * *
 
 # Detailed:
