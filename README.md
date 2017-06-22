@@ -27,6 +27,8 @@
 
 `git branch` : List LOCAL branches. `git branch -r` : List REMOTE branches. `git branch -a` : List ALL branches.
 
+`git for-each-ref --ignore-case --sort=v:refname --format='%(refname:lstrip=3)' refs/remotes/origin`: List origin/* branches sorted
+
 `git branch NEW_BRANCH [<start-point>]` : Create new branch [optionally from a start-point (refs)]
 
 `git branch -d BRANCH_TO_DELETE` : Delete a branch (if it is fully-merged to its upstream or HEAD)
