@@ -27,14 +27,6 @@
 
 `git branch` : List LOCAL branches. `git branch -r` : List REMOTE branches. `git branch -a` : List ALL branches.
 
-`git branch --sort=v:refname --format='%(refname:lstrip=3)' -r`: List origin/* branches sorted
-
-OR: `git for-each-ref --ignore-case --sort=v:refname --format='%(refname:lstrip=3)' refs/remotes/origin`
-
-OR: `git for-each-ref --ignore-case --format='%(refname:lstrip=1)'`
-
-OR: `git for-each-ref --ignore-case --format='%(objecttype) [%(refname:short)] : %(creatordate)'`
-
 `git branch NEW_BRANCH [<start-point>]` : Create new branch [optionally from a start-point (refs)]
 
 `git branch -d BRANCH_TO_DELETE` : Delete a branch (if it is fully-merged to its upstream or HEAD)
@@ -94,7 +86,12 @@ OR: `git for-each-ref --ignore-case --format='%(objecttype) [%(refname:short)] :
 
 **`git commit -am "Merged branch BRANCH_TO_MERGE"`: Comit the merge
 
+* * *
+
+## Being tested:
+
 [link](http://ifandelse.com/listing-git-branches-in-order-of-most-recent-commit/):
+
 ```
 git for-each-ref --sort=-committerdate --format='%(refname:short)|%(committerdate:iso)|%(authorname)' |  
     sed 's/refs\///g' |
@@ -104,6 +101,16 @@ git for-each-ref --sort=-committerdate --format='%(refname:short)|%(committerdat
         printf '%-28s %-18s %s\n' "$date" "$author" "$branch"
     done
 ```
+
+`git for-each-ref --ignore-case --format='%(creatordate:iso) %(objecttype) %(refname:short)'`
+
+`git branch --sort=v:refname --format='%(refname:lstrip=3)' -r`: List origin/* branches sorted
+
+OR: `git for-each-ref --ignore-case --sort=v:refname --format='%(refname:lstrip=3)' refs/remotes/origin`
+
+OR: `git for-each-ref --ignore-case --format='%(refname:lstrip=1)'`
+
+OR: `git for-each-ref --ignore-case --format='%(objecttype) [%(refname:short)] : %(creatordate)'`
 
 * * *
 
