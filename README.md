@@ -183,15 +183,17 @@ OR: `git for-each-ref --ignore-case --format='%(objecttype) [%(refname:short)] :
 ## CHECKOUT a branch
 [`git checkout`](https://git-scm.com/docs/git-checkout)
 >
-`-f` : proceed even if the index or the working tree differs from HEAD. This is used to throw away local changes.
+`-f`|`--force` : proceed even if the index or the working tree differs from HEAD. This is used to throw away local changes.
 
 `-b <new_branch>` : Create a new branch named <new_branch> and start it at <start_point>
 
 `-t`|`--track` : set up "upstream" configuration
 
-`-m`|`--merge` : 
+`-m`|`--merge` : When switching branches, if you have local modifications to files that are different between the current branch and the branch to which you are switching, the command refuses to switch branches in order to preserve your modifications in context. However, with this option, a three-way merge between the current branch, your working tree contents, and the new branch is done, and you will be on the new branch.
 
-`git checkout <branch>`
+`--detach` : Rather than checking out a branch to work on it, check out a commit for inspection and discardable experiments. This is the default behavior of "git checkout <commit>" when <commit> is not a branch name.
+
+`git checkout <branch/commit>`
 
 
 ## BRANCH: List, create, or delete branches
