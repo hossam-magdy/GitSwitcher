@@ -5,7 +5,7 @@ repositoryPath='/path/to/repo';
 remoteName='origin';
 checkoutParams='--force --progress';
 checkoutRemotely=1;
-listSortByField='refname' # Available values: -creatordate || refname || authorname || authorname
+listSortByField='-creatordate' # Available values: refname || -creatordate || authorname || authorname
 tmpFile='/tmp/git-repo-switcher.txt';
 # Config. of listing refs (branches & tags)
 colW_num=2;
