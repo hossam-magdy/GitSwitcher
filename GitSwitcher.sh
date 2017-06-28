@@ -4,7 +4,7 @@ reqGitVer='2.13.0';
 repositoryPath='/path/to/repo';
 remoteName='origin';
 checkoutParams='--force --progress';
-checkoutRemotely=1;
+checkoutRemotely=0;
 listSortByField='-creatordate' # Available values: refname || -creatordate || authorname || authorname
 tmpFile='/tmp/git-repo-switcher.txt';
 # Config. of listing refs (branches & tags)
