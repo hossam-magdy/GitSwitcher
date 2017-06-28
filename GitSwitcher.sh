@@ -194,14 +194,24 @@ function askWhichRef
         if [[ 1 == ${checkoutRemotely} && ! ${refName} =~ ^tags/ ]]; then
             refName=${remoteName}/${refName};
         fi
-        cmd="git checkout ${refName} ${checkoutParams};";
+		cmd="git checkout ${refName} ${checkoutParams};";
         echo "Choosed refname: ${refName}";
         printf "${S_STEP}Checking out (${refName}):${S_RESET}\n";
         printf "${S_CMDON}${cmd}${S_CMDOF}${S_RESET}\n";
         eval ${cmd};
+		git_loadCurrentRef;
     else
         echo "Skipping 'checkout': ${S_YELLOW}Selected refname (branch/tag) is unrecognized${S_RESET}";
     fi
+}
+
+function resetToRemote
+{
+	git_loadCurrentRef;
+	printf "${S_STEP}Resetting branch to remote (${remoteName}/${currentRef}):${S_RESET}\n";
+	cmd="git reset --hard ${remoteName}/${currentRef};";# git merge --ff-only ${remoteName}/${refName};";
+	printf "${S_CMDON}${cmd}${S_CMDOF}${S_RESET}\n";
+	eval ${cmd};
 }
 
 #################################### IMPLEMENTATION
@@ -219,14 +229,15 @@ do
     printf "${S_BF}${S_STEP}Select action:${S_RESET}\n";
 	echo "(1) ALL: Fetch + Status + List/CheckoutRef + Status";
 	echo "(2) Fetch updates";
-	echo "(3) Show status";
-	echo "(4) List/checkout remote ref/branch";
-	echo "(5) Show script configurations";
+	echo "(3) Reset branches to remote";
+	echo "(4) Show status";
+	echo "(5) List/checkout remote ref/branch";
+	echo "(6) Show script configurations";
 	#echo "${S_YELLOW}0 - EXIT${S_RESET}";
     printf "${S_YELLOW}Select action [1-5] (0=Exit): ${S_RESET}";
 	read;
     inputNum=$[$(echo ${REPLY} | sed 's/[^0-9]*//g')+0]; # get ${selectedLineNum} (extract num)
-    if (( ${inputNum} >= 0  &&  ${inputNum} <= 5 )); then
+    if (( ${inputNum} >= 0  &&  ${inputNum} <= 6 )); then
 		if (( ${inputNum} == 0 )); then
 			break;
 		elif (( ${inputNum} == 1 )); then
@@ -239,12 +250,14 @@ do
 		elif (( ${inputNum} == 2 )); then
 			git_fetch;
 		elif (( ${inputNum} == 3 )); then
-			git_status;
+			resetToRemote;
 		elif (( ${inputNum} == 4 )); then
+			git_status;
+		elif (( ${inputNum} == 5 )); then
 			git_loadCurrentRef; # Sets variable: "currentRef"
 			git_listRefs;
 			askWhichRef;
-		elif (( ${inputNum} == 5 )); then
+		elif (( ${inputNum} == 6 )); then
 			showConfigs;
 		fi
     else
