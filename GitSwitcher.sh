@@ -99,6 +99,17 @@ function git_verifyGitVersion # SET 'currentRef' VAR
     fi
 }
 
+function resetRepoPath
+{
+	while [ ! -d "${repositoryPath}/.git" ]
+	do
+        printf ${S_BF}${S_RED}"\nRepository path can not be found:${S_RESET} ${repositoryPath}\n";
+        printf ${S_YELLOW}"Enter the new path: ${S_RESET}\n";
+        read repositoryPath;
+	done
+	cd "${repositoryPath}";
+}
+
 function showConfigs
 {
     printf "${S_STEP}Configuration variables:${S_RESET}\n";
@@ -127,6 +138,7 @@ function git_status
     printf "${S_STEP}Status: \n${S_CMDON}${cmd}${S_CMDOF}${S_RESET}\n";
     #eval $cmd;
     git -c color.ui=false status;
+	resetRepoPath;
 }
 
 function git_listRefs
@@ -193,8 +205,8 @@ function askWhichRef
 }
 
 #################################### IMPLEMENTATION
-cd ${repositoryPath};
 git_verifyGitVersion;
+resetRepoPath
 # git_fetch;
 # git_status;
 # git_loadCurrentRef; # Sets variable: "currentRef"
