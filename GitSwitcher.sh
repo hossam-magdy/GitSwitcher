@@ -205,11 +205,11 @@ function askWhichRef
     fi
 }
 
-function resetToRemote
+function git_resetRemote
 {
 	git_loadCurrentRef;
 	printf "${S_STEP}Resetting branch to remote (${remoteName}/${currentRef}):${S_RESET}\n";
-	cmd="git reset --hard ${remoteName}/${currentRef};";# git merge --ff-only ${remoteName}/${refName};";
+	cmd="git reset --hard ${remoteName}/${currentRef};";# "git merge --ff-only;";
 	printf "${S_CMDON}${cmd}${S_CMDOF}${S_RESET}\n";
 	eval ${cmd};
 }
@@ -250,7 +250,7 @@ do
 		elif (( ${inputNum} == 2 )); then
 			git_fetch;
 		elif (( ${inputNum} == 3 )); then
-			resetToRemote;
+			git_resetRemote;
 		elif (( ${inputNum} == 4 )); then
 			git_status;
 		elif (( ${inputNum} == 5 )); then
