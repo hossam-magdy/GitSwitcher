@@ -95,15 +95,19 @@
 
 ### [`Git-WebUI`](https://github.com/alberthier/git-webui)
 
-This git extension is a standalone web based user interface for git repositories.
+A standalone git-extension for git repositories web-based user interface.
 
-To install: 
+- To install: 
 
 run: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash`
 
-then `cd` to the git repo-path:
+- To run:
+
+`cd` to the git repo-path
 
 run: `git webui`
+
+- To stop: kill the `python` process
 
 * * *
 
