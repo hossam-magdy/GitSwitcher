@@ -103,19 +103,24 @@
 
 - [Udacity: GIT Workflow - Software Development Process - Georgia Tech](https://www.youtube.com/watch?v=3a2x1iJFJWc)
 
-### Extenstion: [`git-flow`](https://github.com/nvie/gitflow)
+### Extenstion: [`git-flow`](https://github.com/petervanderdoes/gitflow-avh)
 
-A collection of Git extensions to provide high-level repository operations for [Vincent Driessen's branching model](http://nvie.com/posts/a-successful-git-branching-model/).
+A collection of Git extensions to provide high-level repository operations for Vincent Driessen's [branching model](http://nvie.com/posts/a-successful-git-branching-model/) with functionality not added to [original](https://github.com/nvie/gitflow) branch.
 
-- To install: `curl https://raw.githubusercontent.com/nvie/gitflow/develop/contrib/gitflow-installer.sh | bash;`
+- To install (updated edition): `curl https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh | bash -s install develop;`
 
 - To initialize/use: `cd REPO_PATH;`,
 then: `git flow init;`,
-then run any of [git-flow commands](https://github.com/nvie/gitflow/wiki/Command-Line-Arguments),
-see also:
+then run any of [git-flow commands](https://github.com/petervanderdoes/gitflow-avh/wiki),
+see:
+[cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/)
 [guide 1](https://blog.axosoft.com/2017/01/31/gitflow/), 
 [guide 2](https://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/), 
 [under the hood](https://leanpub.com/git-flow/read)
+
+- To uninstall: `curl https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh | bash -s uninstall;`
+
+- You can also install [`git-flow-completion`](https://github.com/petervanderdoes/git-flow-completion)
 
 ### Extenstion: [`git-webui`](https://github.com/alberthier/git-webui)
 
