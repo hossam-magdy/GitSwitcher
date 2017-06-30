@@ -118,7 +118,8 @@ function resetRepoPath
 	printf ${S_YELLOW}"\nEnter the new repo-path: ${S_RESET}";
 	read -e repositoryPath;
 	if [ -d "${repositoryPath}/.git" ]; then
-		cd "${repositoryPath}";
+		cd "${repositoryPath}" &> /dev/nul;
+		clear;
 		printf ${S_GREEN}"Repo-path changed to: ${S_MAGENTA}${repositoryPath}${S_RESET}\n";
 	else
 		repositoryPath=${PWD}
@@ -198,11 +199,14 @@ function askWhichRef
     IFS=" " read totalLines tmp <<< $(wc --lines ${tmpFile}); # get ${totalLines}
     
     # Resize terminal
-    terminalRows=$[totalLines+5];
-    printf "\e[8;${terminalRows};${colW_ALL}t";
+	currentTermLines=$(tput lines);
+    terminalLines=$[totalLines+5];
+	if (( terminalLines > currentTermLines )); then
+	    printf "\e[8;${terminalLines};${colW_ALL}t";
+	fi
     
     printf "${S_YELLOW}Checkout / switch to [1-${totalLines}]: ${S_RESET}";
-    read -p "";
+    read;
     selectedLineNum=$[$(echo ${REPLY} | sed 's/[^0-9]*//g')+0]; # get ${selectedLineNum} (extract num)
     if (( ${selectedLineNum} >= 1  &&  ${selectedLineNum} <= ${totalLines} )); then
         line=$(sed "${selectedLineNum}q;d" ${tmpFile});
