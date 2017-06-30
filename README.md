@@ -120,7 +120,9 @@ see:
 
 - To uninstall: `curl https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh | bash -s uninstall;`
 
-- You can also install [`git-flow-completion`](https://github.com/petervanderdoes/git-flow-completion)
+- Note: use `--showcommands` option with any `git-flow command` to: *Show git commands while executing them*
+
+- Note: you can also install [`git-flow-completion`](https://github.com/petervanderdoes/git-flow-completion)
 
 ### Extenstion: [`git-webui`](https://github.com/alberthier/git-webui)
 
