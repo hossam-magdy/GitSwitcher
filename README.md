@@ -113,7 +113,7 @@ see also:
 
 A standalone git-extension for git repositories web-based user interface.
 
-(`.git-webui` folder, <2MB, located in user's home dir => ~/)
+(`~/.git-webui` folder, <2MB, ~ = user's home dir)
 
 - To install: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash;`
 
