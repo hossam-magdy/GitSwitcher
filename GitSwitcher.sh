@@ -143,7 +143,7 @@ function git_loadCurrentRef # SET 'currentRef' VAR
 
 function git_fetch
 {
-    cmd="git fetch --all --tags --progress;";
+    cmd="git fetch --all --tags --progress --prune;";
     printf "${S_STEP}Fetching updates: \n${S_CMDON}${cmd}${S_CMDOF}${S_RESET}\n";
     eval $cmd;
 }
