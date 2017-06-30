@@ -109,6 +109,10 @@ run: `git webui`
 
 - To stop: kill the `python` process
 
+- To uninstall:
+
+`curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/uninstaller.sh | bash`
+
 * * *
 
 # Detailed:
