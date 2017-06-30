@@ -114,10 +114,12 @@ then: `git flow init;`,
 then run any of [git-flow commands](https://github.com/petervanderdoes/gitflow-avh/wiki#reference),
 see:
 [cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/), 
-[guide1](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/git-flow), 
-[guide2](https://blog.axosoft.com/2017/01/31/gitflow/), 
-[guide3](https://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/), 
-[under-the-hood](https://leanpub.com/git-flow/read)
+[1](https://blog.sourcetreeapp.com/2012/08/01/smart-branching-with-sourcetree-and-git-flow/)
+[2](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/git-flow), 
+[3](https://blog.axosoft.com/2017/01/31/gitflow/), 
+[4](https://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/), 
+[5](https://leanpub.com/git-flow/read), 
+[compare commands](https://gist.github.com/Leland/eae99114bcf5349e692f4aca63193775)
 
 - To uninstall: `curl https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh | bash -s uninstall;`
 
