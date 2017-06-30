@@ -97,6 +97,8 @@
 
 A standalone git-extension for git repositories web-based user interface.
 
+(`.git-webui` folder, <2MB, located in user's home dir => ~/)
+
 - To install: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash`
 
 - To run: `cd` to the git repo-path, then: `git webui [-h] [--port PORT] [--repo-root REPO_ROOT] [--allow-hosts ALLOW_HOSTS] [--no-browser] [--host HOST]`
