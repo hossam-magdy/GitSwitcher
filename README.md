@@ -97,21 +97,19 @@
 
 A standalone git-extension for git repositories web-based user interface.
 
-- To install: 
-
-run: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash`
+- To install: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash`
 
 - To run:
 
 `cd` to the git repo-path
 
-run: `git webui`
+then: `git webui`
+
+(usage: `usage: git-webui [-h] [--port PORT] [--repo-root REPO_ROOT] [--allow-hosts ALLOW_HOSTS] [--no-browser] [--host HOST]`)
 
 - To stop: kill the `python` process
 
-- To uninstall:
-
-`curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/uninstaller.sh | bash`
+- To uninstall: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/uninstaller.sh | bash`
 
 * * *
 
