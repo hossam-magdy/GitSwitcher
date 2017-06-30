@@ -91,6 +91,22 @@
 
 * * *
 
+# Handy tools:
+
+### [`Git-WebUI`](https://github.com/alberthier/git-webui)
+
+This git extension is a standalone web based user interface for git repositories.
+
+To install: 
+
+run: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash`
+
+then `cd` to the git repo-path:
+
+run: `git webui`
+
+* * *
+
 # Detailed:
 
 ## LOG
