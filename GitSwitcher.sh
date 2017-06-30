@@ -255,7 +255,7 @@ do
 	echo "(6) Change repo-path: ${S_MAGENTA}${repositoryPath}${S_RESET}";
 	echo "(7) Show script configurations";
 	#echo "${S_YELLOW}0 - EXIT${S_RESET}";
-    printf "${S_YELLOW}Select action [1-5] (0=Exit): ${S_RESET}";
+    printf "${S_YELLOW}Select action [1-7] (0=Exit): ${S_RESET}";
 	read;
     inputNum=$[$(echo ${REPLY} | sed 's/[^0-9]*//g')+0]; # get ${selectedLineNum} (extract num)
     if (( ${inputNum} >= 0  &&  ${inputNum} <= 7 )); then
