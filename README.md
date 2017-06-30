@@ -93,19 +93,33 @@
 
 # Handy tools:
 
-### [`Git-WebUI`](https://github.com/alberthier/git-webui)
+### [`git-flow`](https://github.com/nvie/gitflow)
+
+A collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model.
+
+- To install: `curl https://raw.githubusercontent.com/nvie/gitflow/develop/contrib/gitflow-installer.sh | bash;`
+
+- To initialize/use: `cd REPO_PATH;`,
+then: `git flow init;`,
+then run any of [git-flow commands](https://github.com/nvie/gitflow/wiki/Command-Line-Arguments),
+see also:
+[guide 1](https://blog.axosoft.com/2017/01/31/gitflow/), 
+[guide 2](https://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/), 
+[under the hood](https://leanpub.com/git-flow/read)
+
+### [`git-webui`](https://github.com/alberthier/git-webui)
 
 A standalone git-extension for git repositories web-based user interface.
 
 (`.git-webui` folder, <2MB, located in user's home dir => ~/)
 
-- To install: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash`
+- To install: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/installer.sh | bash;`
 
-- To run: `cd` to the git repo-path, then: `git webui [-h] [--port PORT] [--repo-root REPO_ROOT] [--allow-hosts ALLOW_HOSTS] [--no-browser] [--host HOST]`
+- To run: `cd REPO_PATH;`, then: `git webui [-h] [--port PORT] [--repo-root REPO_ROOT] [--allow-hosts ALLOW_HOSTS] [--no-browser] [--host HOST];`
 
 - To stop: kill the `python` process
 
-- To uninstall: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/uninstaller.sh | bash`
+- To uninstall: `curl https://raw.githubusercontent.com/alberthier/git-webui/master/install/uninstaller.sh | bash;`
 
 * * *
 
