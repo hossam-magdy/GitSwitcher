@@ -105,7 +105,7 @@ function resetRepoPath
 	do
         printf ${S_BF}${S_RED}"\nRepository path can not be found:${S_RESET} ${repositoryPath}\n";
         printf ${S_YELLOW}"Enter the new path: ${S_RESET}\n";
-        read repositoryPath;
+        read -e repositoryPath;
 	done
 	cd "${repositoryPath}";
 }
