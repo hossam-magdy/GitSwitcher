@@ -113,7 +113,7 @@ A collection of Git extensions to provide high-level repository operations for V
 then: `git flow init;`,
 then run any of [git-flow commands](https://github.com/petervanderdoes/gitflow-avh/wiki),
 see:
-[cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/)
+[cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/), 
 [guide 1](https://blog.axosoft.com/2017/01/31/gitflow/), 
 [guide 2](https://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/), 
 [under the hood](https://leanpub.com/git-flow/read)
