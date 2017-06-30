@@ -95,7 +95,15 @@
 
 ### [Git Commit Message Style Guide](https://udacity.github.io/git-styleguide/)
 
-### [`git-flow`](https://github.com/nvie/gitflow)
+### Video guides for git & git-flow
+
+- [BuildaModule: Introduction to branching and merging in Git](https://www.youtube.com/watch?v=BEXAx1qPm-o)
+
+- [BuildaModule: How to use a scalable Git branching model called Gitflow](https://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow#viewing)
+
+- [Udacity: GIT Workflow - Software Development Process - Georgia Tech](https://www.youtube.com/watch?v=3a2x1iJFJWc)
+
+### Extenstion: [`git-flow`](https://github.com/nvie/gitflow)
 
 A collection of Git extensions to provide high-level repository operations for [Vincent Driessen's branching model](http://nvie.com/posts/a-successful-git-branching-model/).
 
@@ -109,7 +117,7 @@ see also:
 [guide 2](https://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/), 
 [under the hood](https://leanpub.com/git-flow/read)
 
-### [`git-webui`](https://github.com/alberthier/git-webui)
+### Extenstion: [`git-webui`](https://github.com/alberthier/git-webui)
 
 A standalone git-extension for git repositories web-based user interface.
 
