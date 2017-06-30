@@ -99,15 +99,31 @@ function git_verifyGitVersion # SET 'currentRef' VAR
     fi
 }
 
-function resetRepoPath
+function fixRepoPath
 {
+	cd "${repositoryPath}" &> /dev/nul;
+	repositoryPath=${PWD}
 	while [ ! -d "${repositoryPath}/.git" ]
 	do
-        printf ${S_BF}${S_RED}"\nRepository path can not be found:${S_RESET} ${repositoryPath}\n";
-        printf ${S_YELLOW}"Enter the new path: ${S_RESET}\n";
-        read -e repositoryPath;
+		resetRepoPath;
 	done
 	cd "${repositoryPath}";
+}
+
+function resetRepoPath
+{
+	if [ ! -d "${repositoryPath}/.git" ]; then
+		printf ${S_BF}${S_RED}"\nRepository path can not be found:${S_RESET} ${repositoryPath}";
+	fi
+	printf ${S_YELLOW}"\nEnter the new repo-path: ${S_RESET}";
+	read -e repositoryPath;
+	if [ -d "${repositoryPath}/.git" ]; then
+		cd "${repositoryPath}";
+		printf ${S_GREEN}"Repo-path changed to: ${S_MAGENTA}${repositoryPath}${S_RESET}\n";
+	else
+		repositoryPath=${PWD}
+		printf ${S_RED}"The entered path is not recognized as a git repo${S_RESET}\n";
+	fi
 }
 
 function showConfigs
@@ -138,7 +154,7 @@ function git_status
     printf "${S_STEP}Status: \n${S_CMDON}${cmd}${S_CMDOF}${S_RESET}\n";
     #eval $cmd;
     git -c color.ui=false status;
-	resetRepoPath;
+	fixRepoPath;
 }
 
 function git_listRefs
@@ -216,7 +232,7 @@ function git_resetRemote
 
 #################################### IMPLEMENTATION
 git_verifyGitVersion;
-resetRepoPath
+fixRepoPath;
 # git_fetch;
 # git_status;
 # git_loadCurrentRef; # Sets variable: "currentRef"
@@ -232,12 +248,13 @@ do
 	echo "(3) Reset branches to remote";
 	echo "(4) Show status";
 	echo "(5) List/checkout remote ref/branch";
-	echo "(6) Show script configurations";
+	echo "(6) Change repo-path: ${S_MAGENTA}${repositoryPath}${S_RESET}";
+	echo "(7) Show script configurations";
 	#echo "${S_YELLOW}0 - EXIT${S_RESET}";
     printf "${S_YELLOW}Select action [1-5] (0=Exit): ${S_RESET}";
 	read;
     inputNum=$[$(echo ${REPLY} | sed 's/[^0-9]*//g')+0]; # get ${selectedLineNum} (extract num)
-    if (( ${inputNum} >= 0  &&  ${inputNum} <= 6 )); then
+    if (( ${inputNum} >= 0  &&  ${inputNum} <= 7 )); then
 		if (( ${inputNum} == 0 )); then
 			break;
 		elif (( ${inputNum} == 1 )); then
@@ -258,6 +275,8 @@ do
 			git_listRefs;
 			askWhichRef;
 		elif (( ${inputNum} == 6 )); then
+			resetRepoPath;
+		elif (( ${inputNum} == 7 )); then
 			showConfigs;
 		fi
     else
