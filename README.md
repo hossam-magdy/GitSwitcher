@@ -91,11 +91,13 @@
 
 * * *
 
-# Handy tools:
+# Handy tools & guides:
+
+### [Git Commit Message Style Guide](https://udacity.github.io/git-styleguide/)
 
 ### [`git-flow`](https://github.com/nvie/gitflow)
 
-A collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model.
+A collection of Git extensions to provide high-level repository operations for [Vincent Driessen's branching model](http://nvie.com/posts/a-successful-git-branching-model/).
 
 - To install: `curl https://raw.githubusercontent.com/nvie/gitflow/develop/contrib/gitflow-installer.sh | bash;`
 
