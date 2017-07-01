@@ -101,7 +101,7 @@ function git_verifyGitVersion # SET 'currentRef' VAR
 
 function fixRepoPath
 {
-	cd "${repositoryPath}" &> /dev/nul;
+	cd "${repositoryPath}" 2>/dev/null;
 	repositoryPath=${PWD}
 	while [ ! -d "${repositoryPath}/.git" ]
 	do
@@ -118,7 +118,7 @@ function resetRepoPath
 	printf ${S_YELLOW}"\nEnter the new repo-path: ${S_RESET}";
 	read -e repositoryPath;
 	if [ -d "${repositoryPath}/.git" ]; then
-		cd "${repositoryPath}" &> /dev/nul;
+		cd "${repositoryPath}" 2>/dev/null;
 		clear;
 		printf ${S_GREEN}"Repo-path changed to: ${S_MAGENTA}${repositoryPath}${S_RESET}\n";
 	else
