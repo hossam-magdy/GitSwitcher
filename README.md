@@ -57,7 +57,7 @@
 
 `git config [--global] user.name "YOUR NAME"`: set the Name of the author/committer
 
-### - Storing credentials
+### - Storing credentials & other configurations
 
 `git config credential.helper store` : [store](https://git-scm.com/docs/git-credential-store) the next input credentials as plaintext in `~/.git-credentials`
 
@@ -66,6 +66,8 @@
 `git credential-cache exit`: Forget all cached credentails (stored by credential.helper cache) even before timeout
 
 `git remote set-url origin https://USER:PASS@repo-url.com/repo.git`: store credentials as plaintext for local repository (`.git/config`)
+
+`git config --global core.autocrlf false`: True => EOL in working directory is CRLF while in repository is LF. False => EOL is not changed.  (EOL changes "LF=>CRLF" occur @ checkout in windows).
 
 ### - Diff branches, Merging & Solving conflicts (**: must run, *: recommended)
 
