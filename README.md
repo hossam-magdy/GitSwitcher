@@ -13,6 +13,8 @@
 
 `git log --graph --oneline --decorate --all --stat`
 
+`git log --oneline --grep="STRING" -F -i`: Find/list all commits with msg including case-insensitive `STRING`
+
 ### - Committing
 
 `git commit -am "COMMIT_MSG"`: Add only changed tracked-files to staging area & commit
