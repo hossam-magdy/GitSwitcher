@@ -7,7 +7,7 @@
 
 # The most common:
 
-### - Status & log
+### - Status, log & commit search
 
 `git status`
 
