@@ -154,21 +154,51 @@ A standalone git-extension for git repositories web-based user interface.
 > 
 `--graph	`: Draw a text-based graphical representation of the commit history on the left hand side of the output.
 
-`--oneline	`:
+`--oneline	`: This is a shorthand for `--pretty=oneline --abbrev-commit` used together.
 
-`--decorate	`:
+`--decorate	`: Print out the ref names of any commits that are shown
 
-`--all		`:
+`--all		`: Pretend as if all the refs in `refs/`, along with `HEAD`, are listed on the command line as `<commit>`
 
-`--relative-date`: shows dates relative to the current time, e.g. “2 hours ago”.
+`--relative-date`|[`--date=relative`](https://git-scm.com/docs/git-log#git-log---dateltformatgt): shows dates relative to the current time, e.g. “2 hours ago”.
 
-`--stat		`:
+`--stat		`: Generate a diffstat. By default, as much space as necessary will be used for the filename part, and the rest for the graph part
 
 `--merges	`: Print only merge commits. This is exactly the same as --min-parents=2
 
 `--merge	`: After a failed merge, show refs that touch files having a conflict and don’t exist on all heads to merge
 
 `--source	`: show the ref (branch) name given on the command line by which each commit was reached
+
+`--pretty[=<format>]`|`--format=<format>`: Pretty-print the contents of the commit logs in a given format, where <format> can be one of `oneline`, `short`, `medium`, `full`, `fuller`, `email`, `raw`, `format:<string>` and `tformat:<string>`. When `<format>` is none of the above, and has `%placeholder` in it, it acts as if `--pretty=tformat:<format>` were given. See the "[PRETTY FORMATS](https://git-scm.com/docs/git-log#_pretty_formats)" section for some additional details for each format. When `=<format>` part is omitted, it defaults to medium.
+
+`--grep=<pattern>`: Limit the commits output to ones with log message that matches the specified pattern (regex). With more than one `--grep=<pattern>`, commits whose message matches any of the given patterns are chosen (but see `--all-match`). When `--show-notes` is in effect, the message from the notes is matched as if it were part of the log message.
+
+`--all-match`: Limit the commits output to ones that match all given `--grep`, instead of ones that match at least one
+
+`--invert-grep`: Limit the commits output to ones with log message that do not match the pattern specified with `--grep=<pattern>`
+
+`-i`|`--regexp-ignore-case`: Match the regular expression limiting patterns without regard to letter case
+
+`--basic-regexp`: Consider the limiting patterns to be basic regular expressions; this is the default
+
+`-E`|`--extended-regexp`: Consider the limiting patterns to be extended regular expressions instead of the default basic regular expressions
+
+`-F`|`--fixed-strings`: Consider the limiting patterns to be fixed strings (don’t interpret pattern as a regular expression)
+
+`--perl-regexp`: Consider the limiting patterns to be Perl-compatible regular expressions. Requires libpcre to be compiled in
+
+`-S<string>`: Look for differences that change the number of occurrences of the specified string (i.e. addition/deletion) in a file. Intended for the scripter’s use.
+
+It is useful when you’re looking for an exact block of code (like a struct), and want to know the history of that block since it first came into being: use the feature iteratively to feed the interesting block in the preimage back into -S, and keep going until you get the very first version of the block.
+
+`-G<regex>`: Look for differences whose patch text contains added/removed lines that match <regex>. Notice the difference between `-S<regex> --pickaxe-regex` and `-G<regex>`.
+
+`--pickaxe-all`: When -S or -G finds a change, show all the changes in that changeset, not just the files that contain the change in <string>
+
+`--pickaxe-regex`: Treat the <string> given to -S as an extended POSIX regular expression to match
+
+`-w`|`--ignore-all-space`: Ignore whitespace when comparing lines. This ignores differences even if one line has whitespace where the other line has none
 
 
 ## COMMIT adding modified files only
