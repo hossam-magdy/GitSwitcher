@@ -97,6 +97,8 @@
 
 ### Video guides for git & git-flow
 
+- [Git workflows in the Enterprise](https://www.youtube.com/watch?v=gLWSJXBbJuE)
+
 - [BuildaModule: Introduction to branching and merging in Git](https://www.youtube.com/watch?v=BEXAx1qPm-o)
 
 - [BuildaModule: How to use a scalable Git branching model called Gitflow](https://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow#viewing)
