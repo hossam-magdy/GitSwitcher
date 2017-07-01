@@ -89,7 +89,7 @@
 
 `git checkout BRANCH_NAME -- PATH_TO_FILE`: Revert a file to to its version at specific branch
 
-**`git commit -am "Merged branch BRANCH_TO_MERGE"`: Comit the merge
+**`git commit -am "Merged branch BRANCH_TO_MERGE"`: Commit the merge
 
 * * *
 
