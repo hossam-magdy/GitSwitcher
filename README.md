@@ -37,6 +37,10 @@
 
 `git branch -D BRANCH_TO_DELETE` : Delete a branch (regardless the merge state to its upstream or HEAD)
 
+`git branch -m <oldname> <newname>`: to rename a branch while pointed to any branch
+
+`git branch -m <newname>`: to rename the current branch
+
 `git checkout HEAD -- my-file.txt`: resets only `my-file.txt` to its state at current `HEAD`
 
 ### - Removing last commit[s] or uncommitted changes or Reverting specific commit[s]
