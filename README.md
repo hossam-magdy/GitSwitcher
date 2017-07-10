@@ -75,17 +75,17 @@
 
 ### - Diff branches, Merging & Solving conflicts (**: must run, *: recommended)
 
-*`git diff ..BRANCH_TO_MERGE` or `git diff CURRENT_BRANCH..BRANCH_TO_MERGE`: Compare the tips of two branches
+*`git diff ..BRANCH_TO_MERGE --ignore-all-space` or `git diff CURRENT_BRANCH..BRANCH_TO_MERGE`: Compare the tips of two branches
 
 **`git merge --no-commit --stat --progress [--strategy-option==ours|theirs] BRANCH_TO_MERGE`: Merge branch to current HEAD (current checked-out branch)
 
-*`git diff HEAD`: Show any changes (in case merge is done with --no-commit)
+*`git diff HEAD -w --ignore-blank-lines`: Show any changes (in case merge is done with --no-commit)
 
-*`git diff HEAD --name-only`: List file names that changed (in case merge is done with --no-commit)
+*`git diff HEAD -w --ignore-blank-lines --name-only`: List file names that changed (in case merge is done with --no-commit)
 
-*[if conflict] `git diff --name-only --diff-filter=U`: List file names that have merge conflicts
+*[if conflict] `git diff -w --ignore-blank-lines`: Show the merge conflicts
 
-*[if conflict] `git diff`: Show the merge conflicts
+*[if conflict] `git diff -w --ignore-blank-lines --name-only --diff-filter=U`: List file names that have merge conflicts
 
 `git log --merge --decorate --source -p PATH_TO_FILE`: Show the history of a single file indicating branch names of each change
 
@@ -291,6 +291,10 @@ It is useful when you’re looking for an exact block of code (like a struct), a
 [`git diff`](https://git-scm.com/docs/git-diff)
 >
 `-a` |`--all` : automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected
+
+`-w`|`--ignore-all-space`: Ignore whitespace when comparing lines
+
+`--ignore-blank-lines`: Ignore changes whose lines are all blank
 
 
 ## STATUS
