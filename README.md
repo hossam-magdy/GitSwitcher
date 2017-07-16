@@ -97,6 +97,14 @@
 
 **`git commit -am "Merged branch BRANCH_TO_MERGE"`: Commit the merge
 
+### - Tagging:
+
+`git tag <tagname> <commit>`: Create new tag at specified commit
+
+`git tag -d <tagname>`: Delete existing tag with given name
+
+`git tag -l`: List all existing tags
+
 * * *
 
 # Handy tools & guides:
