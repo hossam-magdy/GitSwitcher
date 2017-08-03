@@ -53,6 +53,10 @@
 
 `git reset --hard`: DISCARD all uncommited changes in working tree or staging area
 
+`git reset --hard @{u}`: RESET (hardly) current branch state to its upstream
+
+`git rebase`: Rebase current branch state to its upstream (without loosing the unpushed local commits)
+
 `git revert COMMIT_ID`: Revert/Undo the changes of a commit and Create a new commit with the reverted changes
 
 ### - Changing the committer identity
