@@ -7,13 +7,19 @@
 
 # The most common:
 
-### - Status, log & commit search
+### - Status, log, commit search & upgrading from remote
 
 `git status`
 
 `git log --graph --oneline --decorate --all --stat`
 
 `git log --oneline --grep="STRING" -F -i`: Find/list all commits with msg including case-insensitive `STRING`
+
+`git fetch [--all]`: Fetch all remote[s] changes
+
+`git reset --hard @{u}`: RESET (hardly) current branch state to its upstream
+
+`git rebase`: Rebase current branch state to its upstream (without loosing the unpushed local commits)
 
 ### - Committing
 
@@ -52,10 +58,6 @@
 `git reset HEAD~1 --hard`: remove the last 1 commit & DISCARD changes in working directory/tree
 
 `git reset --hard`: DISCARD all uncommited changes in working tree or staging area
-
-`git reset --hard @{u}`: RESET (hardly) current branch state to its upstream
-
-`git rebase`: Rebase current branch state to its upstream (without loosing the unpushed local commits)
 
 `git revert COMMIT_ID`: Revert/Undo the changes of a commit and Create a new commit with the reverted changes
 
