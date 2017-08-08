@@ -85,6 +85,8 @@
 
 `git config --replace --global diff.tool meld|winmerge`: set the `difftool` to `meld` OR `winmerge`
 
+`git difftool [-d|--dir-diff] [OtherBranchName|HEAD~1]`: diff using difftool for all changes
+
 ### - Storing credentials & other configurations
 
 `git config credential.helper store` : [store](https://git-scm.com/docs/git-credential-store) the next input credentials as plaintext in `~/.git-credentials`
