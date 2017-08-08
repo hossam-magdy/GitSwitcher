@@ -69,21 +69,21 @@
 
 ### - Configuring difftool & mergetool
 
-`git config --replace --global difftool.winmerge.cmd "WinMergeU.exe -e -u -dl Local -dr Remote \"\$LOCAL\" \"\$REMOTE\""`: set `difftool.WinMerge` cmd path
+`git config --global difftool.winmerge.cmd "WinMergeU.exe -e -u -dl Local -dr Remote \"\$LOCAL\" \"\$REMOTE\""`: set `difftool.WinMerge` cmd path
 
-`git config --replace --global mergetool.winmerge.cmd "WinMergeU.exe -e -u -dl Base -dr Mine \"$LOCAL\" \"$REMOTE\" \"$MERGED\""`: set `mergetool.WinMerge` cmd path
+`git config --global mergetool.winmerge.cmd "WinMergeU.exe -e -u -dl Base -dr Mine \"$LOCAL\" \"$REMOTE\" \"$MERGED\""`: set `mergetool.WinMerge` cmd path
 
 `git config --global difftool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"`: set difftool.`Meld` cmd path
 
 `git config --global mergetool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"`: set mergetool.`Meld` cmd path
 
-`git config --replace --global difftool.prompt false`: disable prompt on lanching `difftool` on each file diff
+`git config --global difftool.prompt false`: disable prompt on lanching `difftool` on each file diff
 
-`git config --replace --global diff.tool meld|winmerge`: set the `difftool` to `meld` OR `winmerge`
+`git config --global diff.tool meld|winmerge`: set the `difftool` to `meld` OR `winmerge`
 
-`git config --replace --global mergetool.prompt false`: disable prompt on lanching `mergetool` on each file diff
+`git config --global mergetool.prompt false`: disable prompt on lanching `mergetool` on each file diff
 
-`git config --replace --global merge.tool meld|winmerge`: set the `mergetool` to `meld` OR `winmerge`
+`git config --global merge.tool meld|winmerge`: set the `mergetool` to `meld` OR `winmerge`
 
 `git difftool [-d|--dir-diff] [OtherBranchName|HEAD~1]`: diff with another branch/commit using difftool
 
