@@ -79,13 +79,13 @@
 
 `git config --replace --global difftool.prompt false`: disable prompt on lanching `difftool` on each file diff
 
+`git config --replace --global diff.tool meld|winmerge`: set the `difftool` to `meld` OR `winmerge`
+
 `git config --replace --global mergetool.prompt false`: disable prompt on lanching `mergetool` on each file diff
 
 `git config --replace --global merge.tool meld|winmerge`: set the `mergetool` to `meld` OR `winmerge`
 
-`git config --replace --global diff.tool meld|winmerge`: set the `difftool` to `meld` OR `winmerge`
-
-`git difftool [-d|--dir-diff] [OtherBranchName|HEAD~1]`: diff using difftool for all changes
+`git difftool [-d|--dir-diff] [OtherBranchName|HEAD~1]`: diff with another branch/commit using difftool
 
 ### - Storing credentials & other configurations
 
@@ -108,6 +108,8 @@
 *`git diff HEAD -w --ignore-blank-lines`: Show any changes (in case merge is done with --no-commit)
 
 *`git diff HEAD -w --ignore-blank-lines --name-only`: List file names that changed (in case merge is done with --no-commit)
+
+*[if conflict] `git mergetool`: run the pre-configured `mergetool` to resolve conflicts
 
 *[if conflict] `git diff -w --ignore-blank-lines`: Show the merge conflicts
 
