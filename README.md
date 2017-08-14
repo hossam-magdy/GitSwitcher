@@ -67,27 +67,27 @@
 
 `git config [--global] user.name "YOUR NAME"`: set the Name of the author/committer
 
-### - Configuring difftool & mergetool
+### - Configuring difftool(s) & mergetool(s)
 
-`git config --global difftool.meld.cmd '"C:/Program Files (x86)/Meld/Meld.exe" "$LOCAL" "$REMOTE"'`: set `difftool.meld` cmd
+difftool.[meld](http://meldmerge.org/): `git config --global difftool.meld.cmd '"C:/Program Files (x86)/Meld/Meld.exe" "$LOCAL" "$REMOTE"'`
 
-`git config --global mergetool.meld.cmd '"C:/Program Files (x86)/Meld/Meld.exe" --auto-merge "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"'`: set `mergetool.meld` cmd
+mergetool.[meld](http://meldmerge.org/): `git config --global mergetool.meld.cmd '"C:/Program Files (x86)/Meld/Meld.exe" --auto-merge "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"'`
 
-`git config --global difftool.p4merge.cmd '"C:/Program Files/Perforce/p4merge.exe" "$LOCAL" "$REMOTE"'`: set `difftool.p4merge` cmd
+difftool.[p4merge](https://www.perforce.com/downloads/visual-merge-tool): `git config --global difftool.p4.cmd '"C:/Program Files/Perforce/p4merge.exe" "$LOCAL" "$REMOTE"'`
 
-`git config --global mergetool.p4merge.cmd '"C:/Program Files/Perforce/p4merge.exe" "$BASE" "$LOCAL" "$REMOTE" "$MERGED"'`: set `mergetool.p4merge` cmd
+mergetool.[p4merge](https://www.perforce.com/downloads/visual-merge-tool): `git config --global mergetool.p4.cmd '"C:/Program Files/Perforce/p4merge.exe" "$BASE" "$LOCAL" "$REMOTE" "$MERGED"'`
 
-`git config --global difftool.winmerge.cmd '"WinMergeU.exe -e -u -dl Local -dr Remote "$LOCAL" "$REMOTE""'`: set `difftool.WinMerge` cmd
+difftool.[winmerge](http://winmerge.org/): `git config --global difftool.winmerge.cmd '"WinMergeU.exe -e -u -dl Local -dr Remote "$LOCAL" "$REMOTE""'`
 
-`git config --global mergetool.winmerge.cmd '"WinMergeU.exe -e -u -dl Base -dr Mine "$LOCAL" "$REMOTE" "$MERGED""'`: set `mergetool.WinMerge` cmd
+mergetool.[winmerge](http://winmerge.org/): `git config --global mergetool.winmerge.cmd '"WinMergeU.exe -e -u -dl Base -dr Mine "$LOCAL" "$REMOTE" "$MERGED""'`
 
 `git config --global difftool.prompt false`: disable prompt on lanching `difftool` on each file diff
 
 `git config --global mergetool.prompt false`: disable prompt on lanching `mergetool` on each file diff
 
-`git config --global diff.tool meld`: set the `difftool` to `meld` OR `winmerge`
+`git config --global diff.tool meld`: set the `difftool` to `meld`, `p4` OR `winmerge`
 
-`git config --global merge.tool meld`: set the `mergetool` to `meld` OR `winmerge`
+`git config --global merge.tool meld`: set the `mergetool` to `meld`, `p4` OR `winmerge`
 
 `git difftool [-d|--dir-diff] ..RightBranch`: diff with another branch/commit using difftool
 
