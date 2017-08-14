@@ -73,6 +73,8 @@
 
 `git config --global mergetool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"`: set `mergetool.Meld` path
 
+`git config --global mergetool.meld.cmd "\"C:\Program Files (x86)\Meld\Meld.exe\" --diff \"$BASE\" \"$LOCAL\" \"$REMOTE\" --output \"$MERGED\"`: set `mergetool.meld` cmd
+
 `git config --global difftool.winmerge.cmd "WinMergeU.exe -e -u -dl Local -dr Remote \"\$LOCAL\" \"\$REMOTE\""`: set `difftool.WinMerge` cmd
 
 `git config --global mergetool.winmerge.cmd "WinMergeU.exe -e -u -dl Base -dr Mine \"$LOCAL\" \"$REMOTE\" \"$MERGED\""`: set `mergetool.WinMerge` cmd
