@@ -67,7 +67,7 @@
 
 `git config [--global] user.name "YOUR NAME"`: set the Name of the author/committer
 
-### - Configuring difftool(s) & mergetool(s)
+### - Configuring [difftool](https://git-scm.com/docs/git-difftool)(s) & [mergetool](https://git-scm.com/docs/git-mergetool)(s)
 
 difftool.[meld](http://meldmerge.org/): `git config --global difftool.meld.cmd '"C:/Program Files (x86)/Meld/Meld.exe" "$LOCAL" "$REMOTE"'`
 
