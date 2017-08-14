@@ -69,15 +69,13 @@
 
 ### - Configuring difftool & mergetool
 
-`git config --global difftool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"`: set `difftool.Meld` path
+`git config --global difftool.meld.cmd '"C:/Program Files (x86)/Meld/Meld.exe" "$LOCAL" "$REMOTE"'`: set `difftool.meld` cmd
 
-`git config --global mergetool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"`: set `mergetool.Meld` path
+`git config --global mergetool.meld.cmd '"C:/Program Files (x86)/Meld/Meld.exe" --auto-merge "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"'`: set `mergetool.meld` cmd
 
-`git config --global mergetool.meld.cmd "\"C:\Program Files (x86)\Meld\Meld.exe\" --diff \"$BASE\" \"$LOCAL\" \"$REMOTE\" --output \"$MERGED\"`: set `mergetool.meld` cmd
+`git config --global difftool.winmerge.cmd '"WinMergeU.exe -e -u -dl Local -dr Remote "$LOCAL" "$REMOTE""'`: set `difftool.WinMerge` cmd
 
-`git config --global difftool.winmerge.cmd "WinMergeU.exe -e -u -dl Local -dr Remote \"\$LOCAL\" \"\$REMOTE\""`: set `difftool.WinMerge` cmd
-
-`git config --global mergetool.winmerge.cmd "WinMergeU.exe -e -u -dl Base -dr Mine \"$LOCAL\" \"$REMOTE\" \"$MERGED\""`: set `mergetool.WinMerge` cmd
+`git config --global mergetool.winmerge.cmd '"WinMergeU.exe -e -u -dl Base -dr Mine "$LOCAL" "$REMOTE" "$MERGED""'`: set `mergetool.WinMerge` cmd
 
 `git config --global difftool.prompt false`: disable prompt on lanching `difftool` on each file diff
 
@@ -87,7 +85,9 @@
 
 `git config --global merge.tool meld`: set the `mergetool` to `meld` OR `winmerge`
 
-`git difftool [-d|--dir-diff] [OtherBranchName|HEAD~1]`: diff with another branch/commit using difftool
+`git difftool [-d|--dir-diff] ..RightBranch`: diff with another branch/commit using difftool
+
+`git difftool [-d|--dir-diff] LeftBranch..RightBranch`: diff with another branch/commit using difftool
 
 ### - Storing credentials & other configurations
 
