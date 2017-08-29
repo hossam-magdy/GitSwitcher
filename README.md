@@ -77,9 +77,9 @@ difftool.[p4merge](https://www.perforce.com/downloads/visual-merge-tool): `git c
 
 mergetool.[p4merge](https://www.perforce.com/downloads/visual-merge-tool): `git config --global mergetool.p4.cmd '"C:/Program Files/Perforce/p4merge.exe" "$BASE" "$LOCAL" "$REMOTE" "$MERGED"'`
 
-difftool.[winmerge](http://winmerge.org/): `git config --global difftool.winmerge.cmd '"WinMergeU.exe -e -u -dl Local -dr Remote "$LOCAL" "$REMOTE""'`
+difftool.[winmerge](http://winmerge.org/): `git config --global difftool.winmerge.cmd '"WinMergeU.exe" -e -u -dl Local -dr Remote "$LOCAL" "$REMOTE"'`
 
-mergetool.[winmerge](http://winmerge.org/): `git config --global mergetool.winmerge.cmd '"WinMergeU.exe -e -u -dl Base -dr Mine "$LOCAL" "$REMOTE" "$MERGED""'`
+mergetool.[winmerge](http://winmerge.org/): `git config --global mergetool.winmerge.cmd '"WinMergeU.exe" -e -u -dl Base -dr Mine "$LOCAL" "$REMOTE" "$MERGED"'`
 
 `git config --global difftool.prompt false`: disable prompt on lanching `difftool` on each file diff
 
