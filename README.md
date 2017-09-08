@@ -147,9 +147,13 @@ mergetool.[winmerge](http://winmerge.org/): `git config --global mergetool.winme
 
 ### Video guides for git & git-flow
 
-- [Udacity: GIT Workflow - Software Development Process - Georgia Tech (what Git commands does)](https://www.youtube.com/watch?v=3a2x1iJFJWc)
+- [(Introducing git commands) Learn Git in 20 Minutes](https://www.youtube.com/watch?v=Y9XZQO1n_7c)
 
-- [Git workflows in the Enterprise](https://www.youtube.com/watch?v=gLWSJXBbJuE)
+- [(Realizing what git commands actually do) Udacity: GIT Workflow - Software Development Process - Georgia Tech](https://www.youtube.com/watch?v=3a2x1iJFJWc)
+
+- [(Introducing concepts remote, local, push, pull) Learn to Git: Basic Concepts](https://www.youtube.com/watch?v=8KCQe9Pm1kg)
+
+- [(Branching for large projects) Git workflows in the Enterprise](https://www.youtube.com/watch?v=gLWSJXBbJuE)
 
 - [Increasing Agility Through Continuous Delivery: Branching Strategy](https://www.youtube.com/watch?v=y4yg7aT4NgM)
 
