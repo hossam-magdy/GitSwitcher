@@ -147,6 +147,8 @@ mergetool.[winmerge](http://winmerge.org/): `git config --global mergetool.winme
 
 ### Video guides for git & git-flow
 
+- [Udacity: GIT Workflow - Software Development Process - Georgia Tech (what Git commands does)](https://www.youtube.com/watch?v=3a2x1iJFJWc)
+
 - [Git workflows in the Enterprise](https://www.youtube.com/watch?v=gLWSJXBbJuE)
 
 - [Increasing Agility Through Continuous Delivery: Branching Strategy](https://www.youtube.com/watch?v=y4yg7aT4NgM)
@@ -154,8 +156,6 @@ mergetool.[winmerge](http://winmerge.org/): `git config --global mergetool.winme
 - [BuildaModule: Introduction to branching and merging in Git](https://www.youtube.com/watch?v=BEXAx1qPm-o)
 
 - [BuildaModule: How to use a scalable Git branching model called Gitflow](https://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow#viewing)
-
-- [Udacity: GIT Workflow - Software Development Process - Georgia Tech](https://www.youtube.com/watch?v=3a2x1iJFJWc)
 
 ### Extenstion: [`git-flow`](https://github.com/petervanderdoes/gitflow-avh)
 
