@@ -161,6 +161,10 @@ mergetool.[winmerge](http://winmerge.org/): `git config --global mergetool.winme
 
 - [BuildaModule: How to use a scalable Git branching model called Gitflow](https://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow#viewing)
 
+### [Pro Git](http://git-scm.com/book) book:
+
+An official & fully-updated guide to Git and its usage in the modern world.
+
 ### Repository management/hosting services (Collaboration):
 
 - [github.com](https://github.com)
