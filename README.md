@@ -161,6 +161,14 @@ mergetool.[winmerge](http://winmerge.org/): `git config --global mergetool.winme
 
 - [BuildaModule: How to use a scalable Git branching model called Gitflow](https://buildamodule.com/video/change-management-and-version-control-deploying-releases-features-and-fixes-with-git-how-to-use-a-scalable-git-branching-model-called-gitflow#viewing)
 
+### Repository management/hosting services (Collaboration):
+
+- [github.com](https://github.com)
+
+- [bitbucket.org](https://bitbucket.org)
+
+- [gitlab.com](https://gitlab.com)
+
 ### Extenstion: [`git-flow`](https://github.com/petervanderdoes/gitflow-avh)
 
 A collection of Git extensions to provide high-level repository operations for Vincent Driessen's [branching model](http://nvie.com/posts/a-successful-git-branching-model/) with functionality not added to [original](https://github.com/nvie/gitflow) branch.
