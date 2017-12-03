@@ -105,6 +105,8 @@ mergetool.[winmerge](http://winmerge.org/): `git config --global mergetool.winme
 
 `git config --global core.autocrlf false`: True => EOL in working directory is CRLF while in repository is LF. False => EOL is not changed.  (EOL changes "LF=>CRLF" occur @ checkout in windows).
 
+`git config --global core.excludesfile ~/.gitignore`: Global `.gitignore` file (can be for `vendor`, `node_modules`, `.idea`, `nbproject` ...)
+
 ### - Diff branches, Merging & Solving conflicts (**: must run, *: recommended)
 
 *`git diff ..BRANCH_TO_MERGE --ignore-all-space` or `git diff CURRENT_BRANCH..BRANCH_TO_MERGE`: Compare the tips of two branches
